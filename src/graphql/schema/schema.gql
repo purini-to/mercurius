@@ -1,0 +1,32 @@
+enum CardMark {
+  DIAMOND
+  HEART
+  CLUB
+  SPADE
+  JOKER
+}
+
+type Card {
+  mark: CardMark!
+  number: String!
+}
+
+type Player {
+  name: String!
+  deck: [Card!]!
+}
+
+type Query {
+  players: [Player!]!
+}
+
+type Mutation {
+  join(name: String!): Player!
+  leave(name: String!): Boolean!
+  start: Boolean!
+}
+
+type Subscription {
+  players: [Player!]!
+  changePlayerDeck: Player!
+}

@@ -1,0 +1,3 @@
+[
+  "enum CardMark {\n  DIAMOND\n  HEART\n  CLUB\n  SPADE\n  JOKER\n}\n\ntype Card {\n  mark: CardMark!\n  number: String!\n}\n\ntype Player {\n  name: String!\n  deck: [Card!]!\n}\n\ntype Query {\n  players: [Player!]!\n}\n\ntype Mutation {\n  join(name: String!): Player!\n  leave(name: String!): Boolean!\n  start: Boolean!\n}\n\ntype Subscription {\n  players: [Player!]!\n  changePlayerDeck: Player!\n}"
+]

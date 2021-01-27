@@ -1,0 +1,38 @@
+{
+  "name": "mercurius-example",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "npm-run-all clean tsc",
+    "start": "NODE_ENV=development ts-node-dev src/index.ts | pino-pretty",
+    "clean": "rimraf dist/*",
+    "tsc": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purini-to/mercurius-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/purini-to/mercurius-example/issues"
+  },
+  "homepage": "https://github.com/purini-to/mercurius-example#readme",
+  "dependencies": {
+    "altair-fastify-plugin": "^3.1.0",
+    "fastify": "^3.11.0",
+    "mercurius": "^6.10.0",
+    "mercurius-codegen": "^1.3.0",
+    "pino": "^6.11.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node12": "^1.0.7",
+    "@types/node": "^14.14.22",
+    "@types/pino": "^6.3.5",
+    "npm-run-all": "^4.1.5",
+    "pino-pretty": "^4.3.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  }
+}
